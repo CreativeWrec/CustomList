@@ -11,8 +11,10 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-
-
+ List<
+           int> numbers = new List<int>();
+            int itemToAdd = 10;
+            numbers.Add(itemToAdd);
         }
     }
 }

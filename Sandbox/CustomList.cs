@@ -11,6 +11,7 @@ namespace Sandbox
         // member variables (HAS A)
         private T[] items;
 
+
         // constructor (SPAWNER)
         public CustomList()
         {
@@ -20,7 +21,7 @@ namespace Sandbox
         // member methods (CAN DO)
         public void Add(T item)
         {
-
+            
         }
     }
 }
