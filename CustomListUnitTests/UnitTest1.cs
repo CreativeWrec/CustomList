@@ -174,6 +174,7 @@ namespace CustomListUnitTests
             int value5 = 350;
             int expected = 60;
             int actual;
+           
             //act
             myList.Add(value1);
             myList.Add(value2);
@@ -181,6 +182,7 @@ namespace CustomListUnitTests
             myList.Add(value4);
             myList.Add(value5);
             actual = myList[0];
+            
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -252,5 +254,86 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_FivePositiveValuesRemoveTwo_VerifyIndexZero()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
+            int value1 = 60;
+            int value2 = 60;
+            int value3 = 60;
+            int value4 = 60;
+            int value5 = 60;
+            int expected = 60;
+            int actual;
+            
+            //act
+            myList.Add(value1);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            myList.Remove(60);
+            myList.Remove(60);
+            
+            //assert
+            Assert.AreEqual(expected, myList[0]);
+        }
+        [TestMethod]
+        public void Remove_FivePositiveValuesRemoveLastInteger_VerifyIndexFour()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
+            int value1 = 60;
+            int value2 = 60;
+            int value3 = 60;
+            int value4 = 60;
+            int value5 = 60;
+            int expected = 60;
+            int actual;
+
+            //act
+            myList.Add(value1);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            myList.Remove(value5);
+            actual = myList[4];
+
+
+            //assert
+            Assert.AreEqual(expected, myList[4]);
+        }
+        [TestMethod]
+        public void Remove_PositiveValuesRemoveOddNumberedValue_VerifyEvenIndex()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
+            int value1 = 60;
+            int value2 = 60;
+            int value3 = 60;
+            int value4 = 60;
+            int value5 = 60;
+            int expected = 60;
+            int actual;
+
+            //act
+            myList.Add(value1);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList.Add(value4);
+            myList.Add(value5);
+            
+            myList.Remove(value1);
+            myList.Remove(value3);
+            myList.Remove(value5);
+
+            actual = myList[2+4];
+
+            //assert
+            Assert.AreEqual(expected, myList[2+4]);
+        }
+
     }
 }
