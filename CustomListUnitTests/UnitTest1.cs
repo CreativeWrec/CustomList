@@ -221,22 +221,19 @@ namespace CustomListUnitTests
         {
             //arrange
             MyCustomList<int> myList = new MyCustomList<int>();
-            int value1 = 60;
-            int value2 = 30;
-            int value3 = 3;
-            int value4 = 55;
-            int value5 = 350;
+         
             int expected = 30;
             int actual;
             
             //act
-            myList.Add(value1);
-            myList.Add(value2);
-            myList.Add(value3);
-            myList.Add(value4);
-            myList.Add(value5);
-            myList.Remove(value1);
-            actual = myList[0];
+            myList.Add(60);
+            myList.Add(30);
+            myList.Add(3);
+            myList.Add(55);
+            myList.Add(350);
+           
+            myList.Remove(60);
+            actual = myList[1];
             
             //assert
             Assert.AreEqual(expected, actual);
@@ -284,10 +281,10 @@ namespace CustomListUnitTests
 
             
             //assert
-            Assert.AreEqual(expected, myList[0]);
+            Assert.AreEqual(expected, myList[1]);
         }
         [TestMethod]
-        public void Remove_FivePositiveValuesRemoveLastInteger_VerifyIndexFour()
+        public void Remove_FivePositiveValuesRemoveLastInteger_VerifyIndex()
         {
             //arrange
             MyCustomList<int> myList = new MyCustomList<int>();
@@ -303,7 +300,7 @@ namespace CustomListUnitTests
             myList.Add(42);
             myList.Remove(42);
             
-            actual = myList[3];
+            actual = myList[2];
 
 
             //assert

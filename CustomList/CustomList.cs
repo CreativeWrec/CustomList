@@ -15,6 +15,8 @@ namespace CustomList
         private int capacity;
 
 
+
+
         public T this[int index]
         {
             get
@@ -78,7 +80,7 @@ namespace CustomList
 
 
 
-        /*public void Remove(T item)
+        public void Remove(T item)
         {
             {
                 for (int i = 0; i < count; i++)
@@ -100,7 +102,7 @@ namespace CustomList
                 }
                 count--;
             }
-        }*/
+        }
 
 
 
