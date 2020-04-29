@@ -69,12 +69,13 @@ namespace CustomListUnitTests
             int value3 = 3;
             int expected = 30;
             int actual;
+            
             //act
             myList.Add(value1);
             myList.Add(value2);
             myList.Add(value3);
             actual = myList[1];
-            myList[4] = 60;
+            
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -108,6 +109,7 @@ namespace CustomListUnitTests
             int value5 = 350;
             int expected = 5;
             int actual;
+            
             //act
             myList.Add(value1);
             myList.Add(value2);
@@ -115,6 +117,7 @@ namespace CustomListUnitTests
             myList.Add(value4);
             myList.Add(value5);
             actual = myList.Count;
+           
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -130,6 +133,7 @@ namespace CustomListUnitTests
             int value5 = 350;
             int expected = 8;
             int actual;
+            
             //act
             myList.Add(value1);
             myList.Add(value2);
@@ -137,6 +141,7 @@ namespace CustomListUnitTests
             myList.Add(value4);
             myList.Add(value5);
             actual = myList.Capacity;
+            
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -191,13 +196,15 @@ namespace CustomListUnitTests
         {
             //arrange
             MyCustomList<int> myList = new MyCustomList<int>();
-            int value1 = 60;
-            int value2 = 30;
+            int value1 = 1;
+            int value2 = 2;
             int value3 = 3;
-            int value4 = 55;
-            int value5 = 350;
-            int expected = 350;
+            int value4 = 4;
+            int value5 = 5;
+            
+            int expected = 5;
             int actual;
+            
             //act
             myList.Add(value1);
             myList.Add(value2);
@@ -205,10 +212,11 @@ namespace CustomListUnitTests
             myList.Add(value4);
             myList.Add(value5);
             actual = myList[4];
+            
             //assert
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
+        /*[TestMethod]
         public void Remove_FivePositiveValuesRemoveOne_CheckingIndexZero()
         {
             //arrange
@@ -220,6 +228,7 @@ namespace CustomListUnitTests
             int value5 = 350;
             int expected = 30;
             int actual;
+            
             //act
             myList.Add(value1);
             myList.Add(value2);
@@ -227,7 +236,8 @@ namespace CustomListUnitTests
             myList.Add(value4);
             myList.Add(value5);
             myList.Remove(value1);
-            actual = myList[1];
+            actual = myList[0];
+            
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -236,12 +246,12 @@ namespace CustomListUnitTests
         {
             //arrange
             MyCustomList<int> myList = new MyCustomList<int>();
-            int value1 = 60;
-            int value2 = 60;
-            int value3 = 60;
-            int value4 = 60;
-            int value5 = 60;
-            int expected = 60;
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int expected = 0;
             int actual;
             //act
             myList.Add(value1);
@@ -249,7 +259,7 @@ namespace CustomListUnitTests
             myList.Add(value3);
             myList.Add(value4);
             myList.Add(value5);
-            myList.Remove(60);
+            myList.Remove(value1);
             actual = myList[0];
             //assert
             Assert.AreEqual(expected, actual);
@@ -334,6 +344,6 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, myList[2+4]);
         }
-
+*/
     }
 }

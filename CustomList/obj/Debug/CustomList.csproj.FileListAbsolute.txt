@@ -4,3 +4,10 @@ C:\Users\Nevin\Desktop\CustomList\CustomList\bin\Debug\CustomList.pdb
 C:\Users\Nevin\Desktop\CustomList\CustomList\obj\Debug\CustomList.csprojAssemblyReference.cache
 C:\Users\Nevin\Desktop\CustomList\CustomList\obj\Debug\CustomList.exe
 C:\Users\Nevin\Desktop\CustomList\CustomList\obj\Debug\CustomList.pdb
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\bin\Debug\CustomList.exe.config
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\bin\Debug\CustomList.exe
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\bin\Debug\CustomList.pdb
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\obj\Debug\CustomList.csprojAssemblyReference.cache
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\obj\Debug\CustomList.csproj.CoreCompileInputs.cache
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\obj\Debug\CustomList.exe
+C:\Users\LordT\OneDrive\Documents\DevCodeCamp\Projects\CustomList\CustomList\obj\Debug\CustomList.pdb
