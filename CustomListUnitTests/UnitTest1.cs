@@ -267,7 +267,6 @@ namespace CustomListUnitTests
             //arrange
             MyCustomList<int> myList = new MyCustomList<int>();
             int expected = 69;
-            int actual;
             
             //act
             myList.Add(60);
@@ -333,6 +332,95 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Convert_MultipleValuesIndex_ToString()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
+            string expected = "12345";
+            string actual;
 
+            //act
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(3);
+            myList.Add(4);
+            myList.Add(5);
+
+            actual = myList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Convert_SingleValuesIndex_ToString()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
+            string expected = "26";
+            string actual;
+
+            //act
+            myList.Add(26);
+
+            actual = myList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Convert_MultipleValuesIndex_ToStringWithStrings()
+        {
+            //arrange
+            MyCustomList<string> myList = new MyCustomList<string>();
+            string expected = "SunMoonEarth";
+            string actual;
+
+            //act
+            myList.Add("Sun");
+            myList.Add("Moon");
+            myList.Add("Earth");
+
+
+            actual = myList.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //[TestMethod]
+        //public void ()
+        //{
+        //    //arrange
+        //    MyCustomList<int> myList = new MyCustomList<int>();
+        //    string expected;
+        //    string actual;
+
+        //    //act
+        //    myList.Add();
+
+        //    actual = myList.;
+
+        //    //assert
+        //    Assert.AreEqual(expected, actual);
+        //}
+    
+        //[TestMethod]
+        //public void ()
+        //{
+        //    //arrange
+        //    MyCustomList<int> myList = new MyCustomList<int>();
+        //    string expected;
+        //    string actual;
+
+        //    //act
+        //    myList.Add();
+
+        //    actual = myList.;
+
+        //    //assert
+        //    Assert.AreEqual(expected, actual);
+        //}
     }
 }

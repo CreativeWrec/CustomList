@@ -22,14 +22,14 @@ namespace CustomList
         {
             get
             {
-                if(index < count && index >= 0)
-                {
-                    return items[index];
-                }
-                else
-                {
+                return items[index];
+                //if (index < count && index >= 0)
+                //{
+                    
+                //else
+                //{
                    
-                }
+                //}
               
             }
             set
@@ -110,25 +110,23 @@ namespace CustomList
                 yield return items[i];
             }
         }
-       
 
 
+        //45 78 90
+        //"457890"
 
+        //"Sun" "Moon" "Earth"
+        //"SunMoonEarth"
+        public override string ToString()
+        {
+            string stringValues = ""; 
+            for (int i = 0; i < Count; i++)
+            {
+                stringValues += items[i].ToString();
+            }
+            return stringValues;
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
     }
 }
