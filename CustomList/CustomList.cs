@@ -128,5 +128,19 @@ namespace CustomList
 
         }
 
+        public static MyCustomList<T> operator + (MyCustomList<T> myList, MyCustomList<T> myListTwo)
+        {
+            MyCustomList<T> results = new MyCustomList<T>();
+            for (int i = 0; i < myList.Count; i++)
+            {
+                results.Add(myList[i]);
+            }
+            for (int i = 0; i < myListTwo.Count; i++)
+            {
+                results.Add(myListTwo[i]);
+            }
+            return results;
+        }
+
     }
 }

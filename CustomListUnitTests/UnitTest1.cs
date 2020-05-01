@@ -389,38 +389,56 @@ namespace CustomListUnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestMethod]
-        //public void ()
-        //{
-        //    //arrange
-        //    MyCustomList<int> myList = new MyCustomList<int>();
-        //    string expected;
-        //    string actual;
+        [TestMethod]
+        public void Add_Overload_Two_Ints_VerifyIndexZero()
+        {
+            //arrange
+            MyCustomList<int> myList = new MyCustomList<int>();
 
-        //    //act
-        //    myList.Add();
+            myList.Add(1);
+            myList.Add(3);
 
-        //    actual = myList.;
+            MyCustomList<int> myListTwo = new MyCustomList<int>();
+            myListTwo.Add(2);
+            myListTwo.Add(4);
 
-        //    //assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+            MyCustomList<int> result = myList + myListTwo;
+            string expected = 1;
+            string actual;
+
+            //act
+            actual = result[0];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     
-        //[TestMethod]
-        //public void ()
-        //{
-        //    //arrange
-        //    MyCustomList<int> myList = new MyCustomList<int>();
-        //    string expected;
-        //    string actual;
+        [TestMethod]
+        public void Add_Overload_TwoStrings_Order()
+        {
+            //arrange
+            MyCustomList<string> myList = new MyCustomList<string>();
+            myList.Add("One");
+            myList.Add("Two");
+            myList.Add("Three");
 
-        //    //act
-        //    myList.Add();
+            MyCustomList<string> myListTwo = new MyCustomList<string>();
+            myListTwo.Add("Four");
+            myListTwo.Add("Five");
+            myListTwo.Add("Six");
 
-        //    actual = myList.;
+            MyCustomList<string> results = myList + myListTwo;   
+            string expected = 6;
 
-        //    //assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+
+            string actual;
+
+            //act
+
+            actual = results.Count;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
