@@ -142,5 +142,29 @@ namespace CustomList
             return results;
         }
 
+        public static MyCustomList<T> operator - (MyCustomList<T> myList, MyCustomList<T> myListTwo)
+        {
+            MyCustomList<T> results = new MyCustomList<T>();
+            results = myList;
+            foreach (T item in myListTwo)
+            {
+                results.Remove(item);
+            }
+            return results;
+        }
+
+        public MyCustomList<T> Zip (MyCustomList<T> myList, MyCustomList<T> myListTwo)
+        {
+            MyCustomList<T> zipResults = new MyCustomList<T>();
+            if (Count == myListTwo.Count)
+            {
+                for(int i = 0; i < Count; i++)
+                {
+                    zipResults.Add(myList[i]);
+                    zipResults.Add(myListTwo[i]);
+                }
+            }
+            return zipResults;
+        }
     }
 }

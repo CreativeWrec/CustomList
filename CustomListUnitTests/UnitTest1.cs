@@ -397,24 +397,26 @@ namespace CustomListUnitTests
 
             myList.Add(1);
             myList.Add(3);
+            myList.Add(5);
 
             MyCustomList<int> myListTwo = new MyCustomList<int>();
             myListTwo.Add(2);
             myListTwo.Add(4);
+            myListTwo.Add(6);
 
             MyCustomList<int> result = myList + myListTwo;
-            string expected = 1;
-            string actual;
+            int expected = 6;
+            int actual;
 
             //act
-            actual = result[0];
+            actual = result[3];
 
             //assert
             Assert.AreEqual(expected, actual);
         }
     
         [TestMethod]
-        public void Add_Overload_TwoStrings_Order()
+        public void Add_OverloadTwoStringOrder()
         {
             //arrange
             MyCustomList<string> myList = new MyCustomList<string>();
@@ -428,10 +430,10 @@ namespace CustomListUnitTests
             myListTwo.Add("Six");
 
             MyCustomList<string> results = myList + myListTwo;   
-            string expected = 6;
+            int expected = 6;
 
 
-            string actual;
+            int actual;
 
             //act
 
@@ -440,5 +442,49 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Subtract_OverrideOrder()
+        {
+            MyCustomList<string> myList = new MyCustomList<string>();
+            myList.Add("One");
+            myList.Add("Two");
+            myList.Add("Three");
+
+            MyCustomList<string> myListTwo = new MyCustomList<string>();
+            myListTwo.Add("Four");
+            myListTwo.Add("Five");
+            myListTwo.Add("Six");
+
+            MyCustomList<string> results = myList - myListTwo;
+            string expected = "Two";
+            string actual = results[0];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MinusOverload_SubtractTwoInstances_VerifyResult()
+        {
+            MyCustomList<int> myList = new MyCustomList<int>();
+
+            myList.Add(7);
+            myList.Add(9);
+            myList.Add(11);
+
+            MyCustomList<int> myListTwo = new MyCustomList<int>();
+
+            myListTwo.Add(8);
+            myListTwo.Add(10);
+            myListTwo.Add(12);
+
+            MyCustomList<int> result = new MyCustomList<int>();
+
+            result = myList - myListTwo;
+            int expected = 11;
+            int actual = result[0];
+            
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
